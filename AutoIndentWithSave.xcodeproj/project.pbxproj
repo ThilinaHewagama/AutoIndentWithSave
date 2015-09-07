@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCF5D57A1B9E0129004A9D8B /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF5D5791B9E0129004A9D8B /* AppKit.framework */; };
+		CCF5D57C1B9E0129004A9D8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF5D57B1B9E0129004A9D8B /* Foundation.framework */; };
+		CCF5D5811B9E0129004A9D8B /* AutoIndentWithSave.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = CCF5D5801B9E0129004A9D8B /* AutoIndentWithSave.xcscheme */; };
+		CCF5D5841B9E0129004A9D8B /* AutoIndentWithSave.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF5D5831B9E0129004A9D8B /* AutoIndentWithSave.m */; };
+		CCF5D5871B9E0129004A9D8B /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF5D5861B9E0129004A9D8B /* NSObject_Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CCF5D5761B9E0129004A9D8B /* AutoIndentWithSave.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoIndentWithSave.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF5D5791B9E0129004A9D8B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		CCF5D57B1B9E0129004A9D8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		CCF5D57F1B9E0129004A9D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF5D5801B9E0129004A9D8B /* AutoIndentWithSave.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AutoIndentWithSave.xcscheme; path = AutoIndentWithSave.xcodeproj/xcshareddata/xcschemes/AutoIndentWithSave.xcscheme; sourceTree = SOURCE_ROOT; };
+		CCF5D5821B9E0129004A9D8B /* AutoIndentWithSave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoIndentWithSave.h; sourceTree = "<group>"; };
+		CCF5D5831B9E0129004A9D8B /* AutoIndentWithSave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoIndentWithSave.m; sourceTree = "<group>"; };
+		CCF5D5851B9E0129004A9D8B /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		CCF5D5861B9E0129004A9D8B /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		CCF5D58D1B9E0F4F004A9D8B /* xCodeHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xCodeHeaders.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCF5D5741B9E0129004A9D8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF5D57A1B9E0129004A9D8B /* AppKit.framework in Frameworks */,
+				CCF5D57C1B9E0129004A9D8B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCF5D56D1B9E0129004A9D8B = {
+			isa = PBXGroup;
+			children = (
+				CCF5D57D1B9E0129004A9D8B /* AutoIndentWithSave */,
+				CCF5D5781B9E0129004A9D8B /* Frameworks */,
+				CCF5D5771B9E0129004A9D8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCF5D5771B9E0129004A9D8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCF5D5761B9E0129004A9D8B /* AutoIndentWithSave.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCF5D5781B9E0129004A9D8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCF5D5791B9E0129004A9D8B /* AppKit.framework */,
+				CCF5D57B1B9E0129004A9D8B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCF5D57D1B9E0129004A9D8B /* AutoIndentWithSave */ = {
+			isa = PBXGroup;
+			children = (
+				CCF5D5821B9E0129004A9D8B /* AutoIndentWithSave.h */,
+				CCF5D5831B9E0129004A9D8B /* AutoIndentWithSave.m */,
+				CCF5D5851B9E0129004A9D8B /* NSObject_Extension.h */,
+				CCF5D5861B9E0129004A9D8B /* NSObject_Extension.m */,
+				CCF5D57E1B9E0129004A9D8B /* Supporting Files */,
+				CCF5D58D1B9E0F4F004A9D8B /* xCodeHeaders.h */,
+			);
+			path = AutoIndentWithSave;
+			sourceTree = "<group>";
+		};
+		CCF5D57E1B9E0129004A9D8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCF5D57F1B9E0129004A9D8B /* Info.plist */,
+				CCF5D5801B9E0129004A9D8B /* AutoIndentWithSave.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCF5D5751B9E0129004A9D8B /* AutoIndentWithSave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCF5D58A1B9E0129004A9D8B /* Build configuration list for PBXNativeTarget "AutoIndentWithSave" */;
+			buildPhases = (
+				CCF5D5721B9E0129004A9D8B /* Sources */,
+				CCF5D5731B9E0129004A9D8B /* Resources */,
+				CCF5D5741B9E0129004A9D8B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoIndentWithSave;
+			productName = AutoIndentWithSave;
+			productReference = CCF5D5761B9E0129004A9D8B /* AutoIndentWithSave.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCF5D56E1B9E0129004A9D8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Thilina Hewagama";
+				TargetAttributes = {
+					CCF5D5751B9E0129004A9D8B = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = CCF5D5711B9E0129004A9D8B /* Build configuration list for PBXProject "AutoIndentWithSave" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CCF5D56D1B9E0129004A9D8B;
+			productRefGroup = CCF5D5771B9E0129004A9D8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCF5D5751B9E0129004A9D8B /* AutoIndentWithSave */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCF5D5731B9E0129004A9D8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF5D5811B9E0129004A9D8B /* AutoIndentWithSave.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCF5D5721B9E0129004A9D8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF5D5841B9E0129004A9D8B /* AutoIndentWithSave.m in Sources */,
+				CCF5D5871B9E0129004A9D8B /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CCF5D5881B9E0129004A9D8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		CCF5D5891B9E0129004A9D8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		CCF5D58B1B9E0129004A9D8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = AutoIndentWithSave/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		CCF5D58C1B9E0129004A9D8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = AutoIndentWithSave/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCF5D5711B9E0129004A9D8B /* Build configuration list for PBXProject "AutoIndentWithSave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCF5D5881B9E0129004A9D8B /* Debug */,
+				CCF5D5891B9E0129004A9D8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCF5D58A1B9E0129004A9D8B /* Build configuration list for PBXNativeTarget "AutoIndentWithSave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCF5D58B1B9E0129004A9D8B /* Debug */,
+				CCF5D58C1B9E0129004A9D8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCF5D56E1B9E0129004A9D8B /* Project object */;
+}

@@ -281,6 +281,7 @@
 				CCF5D58C1B9E0129004A9D8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

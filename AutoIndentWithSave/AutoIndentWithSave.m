@@ -10,12 +10,13 @@
 #import <objc/runtime.h>
 #import "AutoIndentWithSave.h"
 #import "xCodeHeaders.h"
-
+#import "AutoIndentWithSaveSettings.h"
 
 
 @interface AutoIndentWithSave()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
+
 @end
 
 
@@ -29,11 +30,14 @@
   
   if (self = [super init]) {
     [self swizzler];
+      
+      [self addMenuChangedNotificationObserver];
     // reference to plugin's bundle, for resource access
     self.bundle = plugin;
   }
   return self;
 }
+
 
 - (void)swizzler{
   static dispatch_once_t onceToken;
@@ -45,9 +49,51 @@
 }
 
 - (void)dealloc{
+    
   [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)addMenuChangedNotificationObserver
+{
+    __block id observer = [[NSNotificationCenter defaultCenter] addObserverForName:NSMenuDidChangeItemNotification
+                                                                            object:nil
+                                                                             queue:nil
+                                                                        usingBlock:^(NSNotification * _Nonnull note) {
+                                                                            [[NSNotificationCenter defaultCenter] removeObserver:observer];
+                                                                               [self createEnableMenu];
+                                                                            [self addMenuChangedNotificationObserver];
+                                                                        }];
+}
+
+- (void)createEnableMenu
+{
+    NSString * name = @"Enable Auto Indent with save";
+    NSMenuItem * editorMenuItem = [[NSApp mainMenu] itemWithTitle: @"Editor"];
+    
+    if (editorMenuItem && ![editorMenuItem.submenu itemWithTitle: name]) {
+        
+        
+        NSMenuItem * enableItem = [[NSMenuItem alloc] initWithTitle: name
+                                                            action: @selector(enableDisable:)
+                                                     keyEquivalent: @""];
+        enableItem.target = self;
+        enableItem.state = [AutoIndentWithSaveSettings sharedInstance].enabledPlugin ? NSOnState : NSOffState;
+        [editorMenuItem.submenu addItem: [NSMenuItem separatorItem]];
+        [editorMenuItem.submenu addItem: enableItem];
+        
+        //[editorMenuItem.submenu insertItem:enableItem atIndex:0];
+       
+        
+    }
+}
+
+- (void)enableDisable:(NSMenuItem*)menuItem
+{
+    BOOL oldValue =[AutoIndentWithSaveSettings sharedInstance].enabledPlugin;
+    [AutoIndentWithSaveSettings sharedInstance].enabledPlugin = !oldValue;
+    
+    menuItem.state = [AutoIndentWithSaveSettings sharedInstance].enabledPlugin ? NSOnState : NSOffState;
+}
 
 
 #pragma - Helper Methods
@@ -116,6 +162,8 @@
   }
 }
 
+
+
 @end
 
 
@@ -126,27 +174,29 @@
 //}
 
 -(void) xxx_ide_saveDocument:(id) arg{
-  if([self isKindOfClass:NSClassFromString(@"IDEEditorDocument")]) [self indent];
-  [self xxx_ide_saveDocument:arg];
+    if([self isKindOfClass:NSClassFromString(@"IDEEditorDocument")]) [self indent];
+    [self xxx_ide_saveDocument:arg];
 }
 
+
 -(void) indent{
-  
-  IDESourceCodeDocument *document = [AutoIndentWithSave currentSourceCodeDocument];
-  if(!document) return;
-  
-  NSTextView *currentSourceCodeTextView = [AutoIndentWithSave currentSourceCodeTextView];
-  if(!currentSourceCodeTextView) return;
-  
-  DVTTextStorage *textStorage = [document textStorage];
-  if(!textStorage) return;
-  
-  NSUndoManager *undoManager = [document undoManager];
-  
-  NSInteger textLength = [currentSourceCodeTextView string].length;
-  NSRange textRange = NSMakeRange(0, textLength);
-  [textStorage indentCharacterRange:textRange undoManager:undoManager];
-  
+    if([AutoIndentWithSaveSettings sharedInstance].enabledPlugin)
+    {
+        IDESourceCodeDocument *document = [AutoIndentWithSave currentSourceCodeDocument];
+        if(!document) return;
+        
+        NSTextView *currentSourceCodeTextView = [AutoIndentWithSave currentSourceCodeTextView];
+        if(!currentSourceCodeTextView) return;
+        
+        DVTTextStorage *textStorage = [document textStorage];
+        if(!textStorage) return;
+        
+        NSUndoManager *undoManager = [document undoManager];
+        
+        NSInteger textLength = [currentSourceCodeTextView string].length;
+        NSRange textRange = NSMakeRange(0, textLength);
+        [textStorage indentCharacterRange:textRange undoManager:undoManager];
+    }
 }
 
 @end

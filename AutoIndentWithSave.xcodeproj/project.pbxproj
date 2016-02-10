@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0B88BC1C6B4EFC00762FC7 /* AutoIndentWithSaveSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B88BB1C6B4EFC00762FC7 /* AutoIndentWithSaveSettings.m */; };
 		CCF5D57A1B9E0129004A9D8B /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF5D5791B9E0129004A9D8B /* AppKit.framework */; };
 		CCF5D57C1B9E0129004A9D8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF5D57B1B9E0129004A9D8B /* Foundation.framework */; };
 		CCF5D5811B9E0129004A9D8B /* AutoIndentWithSave.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = CCF5D5801B9E0129004A9D8B /* AutoIndentWithSave.xcscheme */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0B88BA1C6B4EFC00762FC7 /* AutoIndentWithSaveSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoIndentWithSaveSettings.h; sourceTree = "<group>"; };
+		5D0B88BB1C6B4EFC00762FC7 /* AutoIndentWithSaveSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoIndentWithSaveSettings.m; sourceTree = "<group>"; };
 		CCF5D5761B9E0129004A9D8B /* AutoIndentWithSave.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoIndentWithSave.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF5D5791B9E0129004A9D8B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		CCF5D57B1B9E0129004A9D8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -73,6 +76,8 @@
 				CCF5D5831B9E0129004A9D8B /* AutoIndentWithSave.m */,
 				CCF5D5851B9E0129004A9D8B /* NSObject_Extension.h */,
 				CCF5D5861B9E0129004A9D8B /* NSObject_Extension.m */,
+				5D0B88BA1C6B4EFC00762FC7 /* AutoIndentWithSaveSettings.h */,
+				5D0B88BB1C6B4EFC00762FC7 /* AutoIndentWithSaveSettings.m */,
 				CCF5D57E1B9E0129004A9D8B /* Supporting Files */,
 				CCF5D58D1B9E0F4F004A9D8B /* xCodeHeaders.h */,
 			);
@@ -157,6 +162,7 @@
 			files = (
 				CCF5D5841B9E0129004A9D8B /* AutoIndentWithSave.m in Sources */,
 				CCF5D5871B9E0129004A9D8B /* NSObject_Extension.m in Sources */,
+				5D0B88BC1C6B4EFC00762FC7 /* AutoIndentWithSaveSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

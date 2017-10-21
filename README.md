@@ -1,5 +1,5 @@
 # AutoIndentWithSave
-xCode plugin which indent the source code with save<br/>
+Xcode plugin which indent the source code with save<br/>
 <p align="center"><h6>(File->Save or Command + S)</h6></p>
 
 <img src="https://github.com/ThilinaHewagama/AutoIndentWithSave/blob/master/auto_indent_screen_shot.jpg">
@@ -15,10 +15,10 @@ xCode plugin which indent the source code with save<br/>
 <h2>How to install</h2>
 1) Download the project<br/>
 2) Build<br/>
-3) Quit xCode & Re-Launch<br/>
+3) Quit Xcode & Re-Launch<br/>
 
 <br/>
-<i>Note: Tested with xCode 6.4 (supports xCode 6 & above)</i>
+<i>Note: Tested with Xcode 6.4 (supports xCode 6 & above)</i>
 <br/>
 <br/>
 <br/>
